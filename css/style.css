@@ -31,6 +31,7 @@ header .container {
     align-items: center;
     justify-content: space-between;
     max-width: 980px;
+    /*proconteudo não esticar demais na tela*/
     height: 80px;
     margin: auto;
 }
@@ -42,23 +43,32 @@ header nav ul {
 
 header nav ul li {
     list-style: none;
+    /* tirar as bolinhas*/
 }
 
 header nav ul li a {
     text-decoration: none;
+    /* tirar o underline*/
     color: white;
     text-transform: uppercase;
+    /*ficar maiusculo*/
     font-size: 18px;
     padding: 24px;
     transition: all 250ms linear 0s;
+    /*animação no home, artig cotato*/
 }
 
 header nav ul li a:hover {
+    /*quando passar o mause encima do conteudo link ele muda cor*/
     background: rgba(255, 255, 255, 0.15);
 }
 
 header .container img {
     height: 30px;
+}
+
+#checkbox-menu {
+    display: none
 }
 
 
@@ -70,6 +80,7 @@ main {
 
 main .container-main {
     display: flex;
+    /*pra ficar responsivo*/
     align-items: center;
     justify-content: space-between;
     max-width: 980px;
@@ -80,6 +91,7 @@ h2 {
     color: rgb(0, 0, 0);
     font-size: 45px;
     line-height: 50px;
+    /*pro texto nao ficar colado*/
     font-weight: bold;
 }
 
@@ -87,11 +99,16 @@ h3 {
     color: rgb(131, 131, 131);
     font-size: 20px;
     line-height: 28px;
+    /*pro texto nao ficar colado*/
     margin: 10px 0;
 }
 
+
+/*FORMATANDO O FOMULARIO da seção MAIN*/
+
 form {
     margin-top: 20px;
+    /* distancia o formulario do h3*/
 }
 
 form input {
@@ -101,6 +118,7 @@ form input {
     height: 45px;
     margin-bottom: 13px;
     border-radius: 20px;
+    /*arredondar as bordas*/
     border: 2px solid #0080ed;
 }
 
@@ -108,6 +126,9 @@ form [type="submit"] {
     background-color: #0080ed;
     color: white;
 }
+
+
+/*personalisando o cursor qd passar em cima do enviar*/
 
 form [type="submit"]:hover {
     cursor: pointer;
@@ -127,6 +148,7 @@ main .container-main img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
+    /*distancia de um item(img) pra outra*/
 }
 
 .text--medium {
@@ -139,25 +161,31 @@ main .container-main img {
 .card {
     display: flex;
     flex-direction: column;
+    /*as imagens e seus textos em colunas*/
     cursor: pointer;
     box-shadow: 5px 5px 15px -4px #000000;
+    /*vai dar uma sobra para os cards,tom de sobreçair*/
     transition: all 0.3s ease 0s;
+    /*projetar a imagem pra frente*/
 }
 
 .card:hover {
     transform: translateY(-7px);
+    /*projetar a imagem, pra ela ir pra cima eixo y*/
 }
 
 .image {
     width: 100%;
     padding-top: 56.25%;
     overflow: hidden;
+    /*vai deixar a imagem no seu devido local sem entar na outra ao lado*/
     position: relative;
 }
 
 .image img {
     position: absolute;
     border-radius: 10px;
+    /*reduzir a imagem pra caber duas*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
