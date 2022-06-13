@@ -34,21 +34,60 @@
 }
 
 @media (max-width: 630px) {
-    nav {
+    /* nav {
         display: none;
-    }
-    main .container-menu img {
-        display: none;
-    }
-    .container-menu {
+    } */
+    /* .container-menu {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    #checkbox-menu {
+    } */
+    /* #checkbox-menu {
         position: absolute;
         opacity: 0;
+    }  */
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        position: absolute;
+        /*aqui faz o menu ficar fixo no top right*/
+        margin-top: 30px;
+        flex-direction: column;
+        width: 100vw;
+        /*pra ficar na tela inteira*/
+        justify-content: center;
+        /*os menus ficar no centro*/
+        align-items: center;
+        left: 100%;
+        /*ele vem da esquerda para a direita*/
+        transform: translateX(100vw);
+        /*ocupe total minha view*/
+        transition: 0.5s ease transfom;
+        /*pra quando eu clicar ele aparecer suavizado*/
+    }
+    menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+        color: white;
+        background-color: #0080ed;
+        border-radius: 5px;
+    }
+    .menu>li:not(:last-child) {
+        /*se nao for o ultimo filho ele vai ter borda branca*/
+        border-bottom: 1px solid white;
+    }
+    .menu li a {
+        flex: 1;
+        /*utiliza todo o espaço disponivel*/
+        text-align: center;
+    }
+    main .container-menu img {
+        display: none;
     }
     label {
         cursor: pointer;
@@ -67,7 +106,7 @@
         border-radius: 30px;
         transition: 0.25s ease-in-out;
     }
-    /*abaixo estaremos distanciano os span filhos da label*/
+    /*abaixo estaremos distanciando os span filhos da label*/
     label span:nth-child(1) {
         top: 0;
     }
@@ -79,13 +118,22 @@
     }
     #checkbox-menu:checked+label span:nth-child(1) {
         transform: rotate(-45deg);
-        top: 8px
+        top: 8px;
     }
     #checkbox-menu:checked+label span:nth-child(2) {
         opacity: 0;
     }
     #checkbox-menu:checked+label span:nth-child(3) {
         transform: rotate(45deg);
-        top: 8px
+        top: 8px;
+    }
+    nav.menu {
+        width: 100%;
+    }
+    #checkbox-menu:checked~nav .menu {
+        transform: translateX(-100vw);
+        /*ele vai vim 100% para direita*/
+        transition: 0.5s ease transform;
+        /*pra vim de forma suave, devagar*/
     }
 }
