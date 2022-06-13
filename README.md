@@ -1,3 +1,3 @@
 # novo-repositorio-gean
 
-projeto em conjunto  com aulão
+projeto em conjunto  com aulão STARTSE
