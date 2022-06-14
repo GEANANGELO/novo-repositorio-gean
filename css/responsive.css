@@ -34,21 +34,8 @@
 }
 
 @media (max-width: 630px) {
-    /* nav {
-        display: none;
-    } */
-    /* .container-menu {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-    /* #checkbox-menu {
-        position: absolute;
-        opacity: 0;
-    }  */
     .menu-button-container {
-        display: flex;
+        display: flex
     }
     .menu {
         position: absolute;
@@ -64,10 +51,10 @@
         /*ele vem da esquerda para a direita*/
         transform: translateX(100vw);
         /*ocupe total minha view*/
-        transition: 0.5s ease transfom;
+        transition: 0.5s ease transform;
         /*pra quando eu clicar ele aparecer suavizado*/
     }
-    menu>li {
+    .menu>li {
         display: flex;
         justify-content: center;
         margin: 0;
@@ -78,8 +65,8 @@
         border-radius: 5px;
     }
     .menu>li:not(:last-child) {
-        /*se nao for o ultimo filho ele vai ter borda branca*/
         border-bottom: 1px solid white;
+        /*se nao for o ultimo filho ele vai ter borda branca*/
     }
     .menu li a {
         flex: 1;
@@ -118,14 +105,14 @@
     }
     #checkbox-menu:checked+label span:nth-child(1) {
         transform: rotate(-45deg);
-        top: 8px;
+        top: 8px
     }
     #checkbox-menu:checked+label span:nth-child(2) {
         opacity: 0;
     }
     #checkbox-menu:checked+label span:nth-child(3) {
         transform: rotate(45deg);
-        top: 8px;
+        top: 8px
     }
     nav.menu {
         width: 100%;

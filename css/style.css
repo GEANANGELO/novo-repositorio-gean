@@ -1,5 +1,3 @@
-/*abaixo a importação da fonte*/
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 * {
     /*aqui vamos tirar as configuraçõespadão das tags*/
@@ -11,7 +9,6 @@
 
 html,
 body {
-    /* height: 100vh; */
     font-family: "Source Sans Pro", 'Times New Roman';
     text-rendering: optimizeLegibility;
     /*ajuda na qualidade do zoom da pag*/
@@ -43,7 +40,6 @@ header nav ul {
 
 header nav ul li {
     list-style: none;
-    /* tirar as bolinhas*/
 }
 
 header nav ul li a {
@@ -68,7 +64,7 @@ header .container img {
 }
 
 #checkbox-menu {
-    display: none;
+    display: none
 }
 
 
@@ -79,8 +75,8 @@ main {
 }
 
 main .container-main {
-    display: flex;
     /*pra ficar responsivo*/
+    display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 980px;
@@ -99,7 +95,6 @@ h3 {
     color: rgb(131, 131, 131);
     font-size: 20px;
     line-height: 28px;
-    /*pro texto nao ficar colado*/
     margin: 10px 0;
 }
 
@@ -200,8 +195,8 @@ a {
 .image img {
     position: absolute;
     border-radius: 10px;
-    /*reduzir a imagem pra caber duas*/
     top: 50%;
+    /*reduzir a imagem pra caber duas*/
     left: 50%;
     transform: translate(-50%, -50%);
 }
